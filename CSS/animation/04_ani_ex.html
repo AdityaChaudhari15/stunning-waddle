@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn{
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 20px;
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            animation: colorchange 1.5s linear infinite;
+        }
+        @keyframes colorchange{
+            0%{
+                transform: scale(1);
+            }
+            50%{
+                transform: scale(1.2);
+            }
+            100%{
+                transform: scale(1);
+            }
+        }
+        .fade{
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: fadein 3s linear infinite alternate;
+        }
+        @keyframes fadein{
+            0%, 100%{
+                opacity: 1;
+            }
+            50%{
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="btn">Click Me</button>
+    <div class="fade">Hello</div>
+</body>
+</html>

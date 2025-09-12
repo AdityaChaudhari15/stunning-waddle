@@ -1,0 +1,202 @@
+/* === Reset & Base === */
+/* TODO: Universal selector to reset margin, padding, and set box-sizing */
+* {
+  /* your code */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* TODO: Style the body
+   - font-family
+   - text color
+   - background-color */
+body {
+  /* your code */
+    font-family: "Arial", sans-serif;
+        color: black;
+        background: rgb(192, 191, 191);
+}
+
+/* TODO: .shell container
+   - max-width
+   - center align with margin
+   - padding */
+.shell {
+  /* your code */
+    max-width: 72ch;
+        margin: 0 auto;
+        padding: 16px;
+}
+
+/* === Hero Section === */
+/* TODO: #hero
+   - text-align center
+   - margin bottom */
+#hero {
+  /* your code */
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+/* TODO: .page-title
+   - font size
+   - margin bottom */
+.page-title {
+  /* your code */
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+}
+
+/* TODO: .page-subtitle
+   - muted text color
+   - margin bottom */
+.page-subtitle {
+  /* your code */
+    color: grey;
+    margin-bottom: 8px;
+}
+
+/* TODO: .hero-banner
+   - background-image (use a placeholder image)
+   - background-size, background-position
+   - background-attachment: fixed
+   - height and border-radius */
+.hero-banner {
+  /* your code */
+    background-image: url('https://i.pinimg.com/736x/b3/aa/e4/b3aae4530892e15cd9ac43c96ca14477.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-attachment: fixed;
+    height: 300px;
+    border-radius: 8px;
+}
+
+/* === Panel Set === */
+/* TODO: .panel-set
+   - vertical spacing between panels */
+.panel-set {
+  /* your code */
+  line-height: 32px;
+}
+
+/* TODO: .callout base
+   - background-color: white
+   - border-left
+   - padding
+   - border-radius
+   - margin bottom */
+.callout {
+  /* your code */
+    background: white;
+    border-left: 6px solid black;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+/* TODO: .callout-title
+   - font size
+   - margin bottom */
+.callout-title {
+  /* your code */
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+/* TODO: .callout-text
+   - font size
+   - line-height
+   - margin bottom */
+.callout-text {
+  /* your code */
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+/* Variants */
+/* TODO: .info: blue tones */
+/* TODO: .success: green tones */
+/* TODO: .warning: amber tones */
+/* TODO: .danger: red tones */
+/* TODO: .note: gray tones */
+.info {
+  /* your code */
+    background: #d0e7ff;
+    border-left: 6px solid #1e90ff;
+}
+.success {
+  /* your code */
+    background: #d4edda;
+    border-left: 6px solid #28a745;
+}
+.warning {
+  /* your code */
+    background: #fff3cd;
+    border-left: 6px solid #ffc107;
+}
+.danger {
+  /* your code */
+    background: #f8d7da;
+    border-left: 6px solid #dc3545;
+}
+.note {
+  /* your code */
+    background: #e2e3e5;
+    border-left: 6px solid #738ca2;
+}
+
+/* TODO: .callout-list
+   - remove default list style
+   - add padding
+   - spacing */
+.callout-list {
+  /* your code */
+    list-style: none;
+    padding-left: 20px;
+    margin-bottom: 16px;
+}
+
+/* TODO: .callout-item
+   - spacing between items
+   - optional subtle border-left */
+.callout-item {
+  /* your code */
+  margin: 8px 0px;
+  border-left: 2px solid rgb(158, 158, 158);
+    padding-left: 8px;
+}
+
+/* Footer */
+/* TODO: #site-footer
+   - background-color
+   - text-align
+   - padding
+   - margin top */
+#site-footer {
+  /* your code */
+    background: rgb(157, 156, 156);
+    text-align: center;
+    padding: 16px;
+    margin-top: 16px;
+}
+.footer-text {
+  /* your code */
+    color: black;
+    margin-bottom: 8px;
+}
+.footer-link {
+  /* your code */
+    color: blue;
+    text-decoration: none;
+}
+
+/* Grouping example */
+/* TODO: Group .callout-title and .footer-text for shared letter-spacing */
+.callout-title,
+.footer-text {
+  /* your code */
+  letter-spacing: normal;
+}

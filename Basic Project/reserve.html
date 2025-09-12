@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foodie's Delight - Reservations</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      header {
+        background-color: #ff6347;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        height: 10vh;
+        align-content: center;
+      }
+      form {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+      }
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+      }
+      input, textarea {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      input[type="submit"] {
+        background-color: #ff6347;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #e5533d;
+      }
+      footer {
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: 8px;
+        height: 10vh;
+        justify-content: center;
+        padding-top: 2%;
+        align-items: center;
+      }
+      footer p {
+        margin: 8px;
+      }
+      footer a {
+        color: white;
+        text-decoration: none;
+        margin: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Book a Table</h1>
+    </header>
+
+    <form action="#" method="POST">
+      <!-- TODO: Add an input field for Name with a label -->
+       <label for="name">Name : </label> <input type="text" id="name" name="name" required><br><br>
+
+      <!-- TODO: Add an input field for Email with a label -->
+       <label for="email">Email : </label> <input type="email" id="email" name="email" required><br><br>
+
+      <!-- TODO: Add an input field for Phone with a label -->
+       <label for="phone">Phone : </label> <input type="text" id="phone" name="phone" required><br><br>
+
+      <!-- TODO: Add an input field for Date selection with a label -->
+       <label for="date">Date : </label> <input type="date" name="date" id="date" required><br><br>
+
+      <!-- TODO: Add an input field for Time selection with a label -->
+       <label for="time">Time : </label> <input type="time" name="time" id="time" required><br><br>
+
+      <!-- TODO: Add an input field for Number of Guests with a label -->
+       <label for="guest">No of Guest : </label> <input type="number" id="guest" name="guest" required><br><br>
+
+      <!-- TODO: Add a textarea for Special Requests with a label -->
+       <label for="req">Speacial Request : </label> <input type="teaxtarea" id="req" name="req" rows="4" cols="50"><br><br>
+
+      <!-- TODO: Add a Submit button -->
+        <input type="submit" value="Submit"><br>
+       
+    </form>
+
+    <footer>
+      <p>&copy; 2025 Foodie's Delight. All rights reserved.</p>
+      <a href="home.html">Home</a> | <a href="menu.html">Menu</a> |
+      <a href="reserve.html">Reservations</a> |
+      <a href="contact.html">Contact</a>
+    </footer>
+  </body>
+</html>

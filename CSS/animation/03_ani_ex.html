@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* marquee{
+            font-size: 30px;
+            font-weight: bold;
+            border: 2px solid black;
+            height: 100px;
+            width: 400px;
+        } */
+        .marq{
+            border: 2px solid black;
+            height: 100px;
+            width: 400px;
+            overflow: hidden;
+        }
+        .marq p{
+            margin: 0;
+            font-size: larger;
+            animation: marquees 8s linear infinite;
+        }
+        @keyframes marquees{
+            0%{
+                transform: translateX(100%);
+            }
+            100%{
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+<body>
+   <!-- <marquee behavior="" direction="left">Welcome to Acciojob</marquee>  -->
+    <div class="marq">
+        <p>Welcome to AccioJob</p>
+    </div>
+</body>
+</html>

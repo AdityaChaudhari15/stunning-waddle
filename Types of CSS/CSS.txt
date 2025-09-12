@@ -1,0 +1,55 @@
+css
+----------------
+3 ways to add in html(priority wise)
+1.inline
+the priority of these two will depend upon the order in wchich you've written for e.g.
+if you've written internal at last internal will get implemented
+if you've written external at last external will get executed.
+2.internal
+3.external
+
+
+id vs class
+--------------------
+id: 
+1. one id can be given to only one element
+2. one element can have only one id
+
+class :
+1. one class can be given to multiple elements
+2. one element can have multiple classes
+
+selectors :
+----------------------
+1. tag/element selectors
+2. id selector 
+3. class selector
+4. universal selector
+5. grouping selector
+
+
+
+display
+-----------------------
+1. block
+    - takes width acc to its 
+    - next elem in same line
+    - height and width has no effect
+
+2. block
+    - takes 100% width
+    - next elem in new line
+    - we can set height and width
+
+3. inline-block
+    - we can set height and width
+    - next elem in same line
+
+4. none
+
+
+margin : 10px   (all 4 sides)
+margin : 10px 20px   (top-bottom, left-right)
+margin : 10px 20px 30px  (top, left-right, bottom)
+margin : 10px 20px 30px 40px  (top, right, bottom, left)
+margin-left : 10px   (top, bottom, right)

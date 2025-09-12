@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sidebar Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    .layout {
+      display: flex;
+    }
+    .sidebar {
+      background: lightgray;
+      padding: 20px;
+      width: 200px;
+    }
+    .content {
+      flex: 1;
+      padding: 20px;
+    }
+    @media (max-width: 600px) and (min-width: 500px) {
+      .sidebar {
+        display: none;
+      }
+    }
+
+    /* Mobile: hide sidebar */
+    
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <div class="sidebar">Sidebar</div>
+    <div class="content">Main Content</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="action-btn" type="submit">Click</button>
+    <div id="output"></div>
+
+    <script>
+        let btn = document.getElementById("action-btn");
+        let out = document.getElementById("output");
+        btn.addEventListener('click',()=>{
+            btn.setAttribute("class","active");
+            out.textContent = "Attribute 'class' set to 'active'";
+        })
+        btn.addEventListener('dblclick',()=>{
+            btn.removeAttribute("class");
+            out.textContent = "Attribute class removed";
+        })
+        btn.addEventListener('contextmenu',()=>{
+            let val = btn.getAttribute("type");
+            out.textContent = "Attribute type is set " + val;
+        })
+    </script>
+</body>
+</html>

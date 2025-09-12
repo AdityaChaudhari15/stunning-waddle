@@ -1,0 +1,33 @@
+<!-- ## **Exercise 4: Add and Remove Newsletter Pop-up**
+### 🎯 **Task:**
+On your blog website, a **newsletter pop-up** 
+should appear when the user clicks the “Show Newsletter” button, and disappear when they click “Close”. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="show-btn">Show Newsletter</button>
+    <button id="close-btn">Close</button>
+
+    <script>
+        let sbtn = document.getElementById('show-btn');
+        let cbtn = document.getElementById('close-btn');
+        let div = document.createElement('div');
+        sbtn.addEventListener('click',()=>{
+            div.textContent = "Subscribe to our Newsletter"
+            
+            div.setAttribute('id','newsletter');
+            document.body.appendChild(div)
+        })
+        cbtn.addEventListener('click',()=>{
+            document.body.removeChild(div);
+        })
+        
+    </script>
+</body>
+</html>

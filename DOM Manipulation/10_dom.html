@@ -1,0 +1,35 @@
+<!-- ## **Exercise 3: Update Hero Section Title and Style on Button Click**
+### 🎯 **Task:**
+You're working on the **hero section** of a portfolio homepage. 
+When a user clicks a button, the main title should update and get visually highlighted. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .highlight {
+            color: #007bff;
+            font-size: 2.5rem;
+            transition: 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <section id="hero">
+        <h1 id="hero-title">Hello World!</h1>
+        <button id="update-btn">Update Title</button>
+    </section>
+
+<script>
+    let hero = document.getElementById("hero-title");
+    let btn = document.getElementById("update-btn");
+    btn.addEventListener('click', ()=>{
+        hero.textContent = "Welcome to my Portfolio";
+    });
+    hero.setAttribute("class","highlight");
+</script>
+</body>
+</html>

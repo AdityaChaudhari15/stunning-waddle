@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="mybox" class="box blue">I'm a box</div>
+
+    <button id="add">Add "highlight"</button>
+    <button id="remove">Remove "blue"</button>
+    <button id="toggle">Toggle "rounded"</button>
+    <button id="check">Check "shadow"</button>
+
+    <script>
+        para = document.createElement('p');
+        let add = document.getElementById("add");
+        let remove = document.getElementById("remove");
+        let toggle = document.getElementById("toggle");
+        let check = document.getElementById("check");
+        let box = document.getElementById("mybox");
+
+        add.addEventListener('click',()=>{
+            box.classList.add("highlight");
+            para.textContent = 'Class "highlight" added.';
+            document.body.appendChild(para);
+        })
+        remove.addEventListener('click',()=>{
+            box.classList.remove("blue");
+            para.textContent = 'Class "blue" removed.';
+        })
+        toggle.addEventListener('click',()=>{
+            box.classList.toggle("rounded");
+            if(box.classList.contains("rounded")){
+                para.textContent = 'Class "rounded" added.';
+            }
+            else{
+                para.textContent = 'Class "rounded" removed.';
+            }
+        })
+        check.addEventListener('click',()=>{
+            let ans  = box.classList.contains("shadow");
+            para.textContent = `Status of class "shadow": ${ans}`;
+            document.body.appendChild(para);
+        })
+    </script>
+</body>
+</html>

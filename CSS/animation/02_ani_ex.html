@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bounce{
+            height: 100px;
+            width: 100px;
+            background-color: coral;
+            border-radius: 50%;
+            animation : bounceball 1.5s infinite;
+            position: relative;
+        }
+        @keyframes bounceball{
+            0% {
+            transform: translateY(0);
+            }
+            50% {
+                transform: translateY(200px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bounce"></div>
+</body>
+</html>

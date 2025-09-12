@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="02_carticon.css">
+</head>
+<body>
+    <!-- ## **Exercise 1: Notification Badge on a Cart Icon**
+> 🛒 “Add a small red circular badge to the top-right corner of a cart icon to show the number of items in the cart.” -->
+    <div class="cart-icon">
+        <img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" alt="Cart Icon" width="50" height="50">
+        <span class="badge">3</span>
+    </div>
+    <style>
+        .cart-icon {
+            position: relative;
+            display: inline-block;
+        }
+
+        .cart-icon img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .badge {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: red;
+            color: black;
+            border-radius: 50%;
+            padding: 5px 10px;
+            font-size: 14px;
+        }
+        .badge::after {
+            content: '3';
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            transform: translate(50%, -50%);
+            width: 10px;
+            height: 10px;
+            background-color: red;
+            border-radius: 50%;
+        }
+    </style>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quae deleniti et tenetur, repellat consectetur mollitia magnam recusandae? Aliquid incidunt ipsum sunt officiis quaerat odio voluptates amet corporis aut, nostrum nobis neque, dolorum iure perferendis error sequi iste magni explicabo, exercitationem provident a quae quasi qui! Velit laborum totam voluptates minima mollitia esse, pariatur sunt iusto sequi! Consequatur aliquid laudantium voluptas distinctio tenetur incidunt impedit, consequuntur ipsam sapiente harum nulla omnis corporis libero? Dolorum similique, velit nemo exercitationem dolorem est recusandae inventore totam! Aspernatur numquam laudantium nesciunt excepturi dolorem fuga, consectetur quis quae dolore enim quia dolor reiciendis a accusantium?</p>
+</body>
+</html>

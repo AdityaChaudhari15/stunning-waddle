@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="add-text">Add Plain Text</button>
+    <button id="add-html">Add HTML Content</button>
+    <div id="output"></div>
+
+    <script>
+        let addtext = document.getElementById("add-text");
+        let addhtml = document.getElementById("add-html");
+        let output = document.getElementById("output");
+        addtext.addEventListener('click',()=>{
+            output.textContent = "This is plain text content.";
+        })
+        addhtml.addEventListener('click',()=>{
+            output.innerHTML = "<h2>This is HTML content</h2>";
+        })
+
+    </script>
+</body>
+</html>

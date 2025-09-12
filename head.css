@@ -1,0 +1,9 @@
+*{
+    height: 100%;
+    width: 100%;
+}
+#h1{
+    font-weight: bolder;
+    color: aliceblue;
+    font-family: 'Courier New', Courier, monospace;
+}

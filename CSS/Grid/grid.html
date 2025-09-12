@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .block-grid {
+            display: grid;
+            border: 1px solid black;
+            height: 400px;
+
+            grid-template-columns: 100px 100px;
+            grid-template-rows: 100px 100px 100px;
+            gap: 10px;
+
+            align-items: center;
+            justify-items: center;
+
+            align-content: center;
+            justify-content: center;
+        }
+        .inline-grid{
+            display: inline-grid;
+            border: 1px solid black;
+        }
+        .item{
+            border: 1px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="block-grid">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+
+    <div class="inline-grid">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+</body>
+</html>

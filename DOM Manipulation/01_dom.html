@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome To my App</h1>
+    <button class="btn">Click Me</button>
+    
+    <script>
+        // document.write("Hello from rishi")
+
+// let hed = document.getElementById('hed')
+// console.log(hed)
+
+// let para = document.getElementsByClassName('para')
+// console.log(para)
+
+// let x = document.querySelectorAll(".para")
+// console.log(x)
+
+
+let para = document.createElement('p')
+para.textContent = "this is js text"
+document.body.appendChild(para)
+document.body.removeChild(para)
+
+let btn = document.getElementById('btn')
+btn.addEventListener('click',()=>{
+    alert("button clicked")
+})
+    </script>
+</body>
+</html>

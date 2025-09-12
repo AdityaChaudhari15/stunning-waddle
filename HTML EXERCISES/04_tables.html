@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <H1>TABLES</H1>
+    <h2>Example</h2>
+    <table border="1" cellspacing="1" cellpadding="1">
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>age</th>
+                <th>roll no</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>jay</td>
+                <td>26</td>
+                <td>101</td>
+            </tr>
+            <tr>
+                <td>mehul</td>
+                <td>25</td>
+                <td>111</td>
+            </tr>
+            <tr>
+                <td>neha</td>
+                <td>22</td>
+                <td>205</td>
+            </tr>
+        </tbody>
+    </table>
+
+<!-- ### **Compare Hotel Room Prices Using a Table**
+
+- Create a **3-column table** with:
+    - Column 1: **Hotel Name**
+    - Column 2: **Room Price per DayD**
+    - Column 3: **User Ratings** -->
+
+<h2> 1) Compare Hotel Room Prices Using a Table</h2>
+    <table border="2" cellspacing="1" cellpadding="2" bordercolor="black">
+        <thead>
+            <tr>
+                <th>Hotel Name</th>
+                <th>Room Price per Day</th>
+                <th>User Ratings</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>🏡qwerty</td>
+                <td>5000💵</td>
+                <td>4.7⭐</td>
+            </tr>
+            <tr>
+                <td>🏡asdfgh</td>
+                <td>15000💵</td>
+                <td>10.0⭐</td>
+            </tr>
+            <tr>
+                <td>🏡zxcvbn</td>
+                <td>4500💵</td>
+                <td>5.0⭐</td>
+            </tr>
+        </tbody>
+    </table>
+
+<!-- ### **Create a Flight Schedule Table**
+
+- Use a `<table>` with:
+    - Column 1: **Flight Number**
+    - Column 2: **Departure City**
+    - Column 3: **Arrival City**
+    - Column 4: **Time** -->
+<h2> 2) Create a Flight Schedule Table</h2>
+    <table border="2" cellspacing="1" cellpadding="3" bordercolor="black">
+        <thead>
+            <tr>
+                <th>Flight</th>
+                <th>Departure Time</th>
+                <th>Arrival City</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>AI 302</td>
+                <td>New York</td>
+                <td>London</td>
+                <td>10:30 AM</td>
+            </tr>
+            <tr>
+                <td>BA 765</td>
+                <td>Paris</td>
+                <td>Dubai</td>
+                <td>2:45 PM</td>
+            </tr>
+            <tr>
+                <td>LH 890</td>
+                <td>Berlin</td>
+                <td>Tokyo</td>
+                <td>07:15 PM</td>
+            </tr>
+        </tbody>
+    </table>
+
+<h2> 3) Create a table for marks of the students</h2>
+
+    <table border="2" cellspacing="1" cellpadding="3" bordercolor="black">
+        <thead>
+            <tr>
+                <th rowspan="2">Roll No</th>
+                <th rowspan="2">Name</th>
+                <th colspan="3">Subject</th>
+                <th rowspan="2">Marks</th>
+            </tr>
+            <tr>
+                <th>Math</th>
+                <th>Science</th>
+                <th>English</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Nitin</td>
+                <td>85</td>
+                <td>70</td>
+                <td>90</td>
+                <td>85</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Anand</td>
+                <td>85</td>
+                <td>70</td>
+                <td>90</td>
+                <td>85</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2> 4) Create a table for Sessions and Speakers</h2>
+    <table border="2" cellspacing="1" cellpadding="3" bordercolor="black">
+        <tr>
+            <th rowspan="2">Time</th>
+            <th colspan="2">Session</th>
+            <th rowspan="2">Speaker</th>
+        </tr>
+        <tr>
+            <th>Title</th>
+            <th>Type</th>
+        </tr>
+        <tr>
+            <td rowspan="2">10:00 AM - 11:00 AM</td>
+            <td>AI in Healthcare</td>
+            <td>Keynote</td>
+            <td>Dr. Smith</td>
+        </tr>
+        <tr>
+            <td>AI Ethics</td>
+            <td>Panel Discussion</td>
+            <td>Dr. Lee</td>
+        </tr>
+        <tr>
+            <td>11:00 AM - 12:00 PM</td>
+            <td colspan="2">Break</td>
+            <td> </td>
+        </tr>
+    </table>
+
+    <h2> 5) Create a table for comparing Product Prices</h2>
+    <table border="2" cellspacing="1" cellpadding="3" bordercolor="black" style="width: 500px;">
+        <tr>
+            <th rowspan="2">Product ID</th>
+            <th rowspan="2">Product Name</th>
+            <th colspan="2">Stock</th>
+            <th rowspan="2">Price</th>
+        </tr>
+        <tr>
+            <th>Available</th>
+            <th>Sold</th>
+        </tr>
+        <tr>
+            <td>101</td>
+            <td>Laptop</td>
+            <td>50</td>
+            <td>30</td>
+            <td>$1000</td>
+        </tr>
+        <tr>
+            <td>102</td>
+            <td>Smartphone</td>
+            <td>120</td>
+            <td>70</td>
+            <td>$700</td>
+        </tr>
+        <tr>
+            <td rowspan="2">103</td>
+            <td rowspan="2">Headphones</td>
+            <td>80</td>
+            <td>40</td>
+            <td>$50</td>
+        </tr>
+        <tr>
+            <td>50</td>
+            <td>30</td>
+            <td>$40</td>
+        </tr>
+    </table>
+
+
+</body>
+</html>

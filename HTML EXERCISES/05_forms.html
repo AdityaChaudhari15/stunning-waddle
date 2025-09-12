@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>FORMS</h1>
+    <!-- (input, button, textarea, select, option), label, fieldset, legend, datalist -->
+    <form>
+        <label for="uname">Username:</label>
+        <input type="text" id="uname" name="uname"><br><br>
+
+        <label for="em">Email:</label> <input type="email" id="em" name="em"><br><br>
+
+        <label for="pass">Password: </label> <input type="password" id="pass" name="pass"><br><br>
+
+        Age: <input type="number"><br><br>
+
+        Gender: Male<input type="radio" name="Gender">
+                Female<input type="radio" name="Gender">
+                Other<input type="radio" name="Gender"><br><br>
+
+        Are you eligible? : <input type="checkbox"><br><br>
+
+        <select name="phone" id="">
+            <option value="iphn">Apple</option>
+            <option value="sam">Samsung</option>
+            <option value="oplus">Oneplus</option>
+        </select><br><br>
+
+        About Yourself: <textarea rows="5" cols="50"></textarea><br><br>
+
+        <input type="reset" value="Reset">
+
+        <input type="submit" value="Submit">
+    </form>
+
+<!-- ### **Build a "Book a Hotel" Reservation Form**
+    - Include **fields for**:
+    - Name
+    - Email
+    - Check-in Date
+    - Check-out Date
+    - Number of Guests
+    - A **Submit button** -->
+
+    <h2>2) Book a Hotel Reservation Form</h2>
+    <form>
+        <label>Name</label> <input type="text"><br><br>
+        <label>Email</label> <input type="email"><br><br>
+        <label>Check-in Date</label> <input type="date"><br><br>
+        <label>Check-out Date</label> <input type="date"><br><br>
+        <label>Number of Guests</label> <input type="number"><br><br>
+        <input type="submit" value="Submit"><br><br>
+    </form>
+
+<!-- ### **Design a Job Application Form for a Web Developer Role**
+- Include **text fields for Name, Email, Phone Number**.
+- Add a **dropdown (`<select>`) for Job Position**.
+- Include a **file upload (`<input type="file">`) for resume upload**. -->
+
+    <h2>3) Job Application Form for Web Developer Role</h2>
+    <form>
+        <label>Name</label> <input type="text"><br><br>
+        <label>Email</label> <input type="email"><br><br>
+        <label>Phone Number</label> <input type="tel"><br><br>
+        <label>Job Position</label>
+        <select name="position" id="">
+            <option value="webdev">Web Developer</option>
+            <option value="des">Designer</option>
+            <option value="seo">SEO Specialist</option>
+        </select><br><br>
+        <label>Resume Upload</label> <input type="file"><br><br>
+        <input type="submit" value="Submit"><br><br>
+    </form>
+
+<!-- ### **Create a Newsletter Subscription Form**
+- Add **an email input field and a "Subscribe" button**.
+- Include a **checkbox (`<input type="checkbox">`)** for agreeing to terms. -->
+    <h2>4) Newsletter Subscription Form</h2>
+    <form>
+        <label>Email</label> <input type="email"><br><br>
+        <input type="checkbox"> I agree to the terms and conditions<br><br>
+        <input type="submit" value="Subscribe"><br><br>
+    </form>
+
+<!-- ### **Build a Customer Feedback Form for an E-commerce Website**
+- Include:
+    - Name
+    - Email
+    - Star Rating (`<input type="radio">`)
+    - Comments Text Area -->
+    <h2>5) Customer Feedback Form for E-commerce Website</h2>
+    <form>
+        <label>Name</label> <input type="text"><br><br>
+        <label>Email</label> <input type="email"><br><br>
+        <label>Star Rating</label><br>
+        1 Star<input type="radio" name="rating">
+        2 Stars<input type="radio" name="rating">
+        3 Stars<input type="radio" name="rating">
+        4 Stars<input type="radio" name="rating">
+        5 Stars<input type="radio" name="rating"><br><br>
+        <label>Comments</label><textarea rows="4" cols="50"></textarea><br><br>
+        <input type="submit" value="Submit"><br><br>
+    </form>
+
+</body>
+</html>

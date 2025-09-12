@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .image-container{
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+        }
+        .image{
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+        }
+        .image:hover{
+            transform: scale(1.1) translateY(-10px);
+            transition: transform 1s ease;
+        }
+        .btn{
+            height: 50px;
+            width: 100px;
+            font-size: 16px;
+            background: orangered;
+            color: white;
+            border: none;
+        }
+        .btn:hover{
+            transform: scale(1.1) translate(8px, -8px);
+            transition: transform 1s ease;
+        }
+
+        .card{
+            width: 200px;
+            height: 150px;
+            background: blueviolet;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 32px;
+        }
+        .card:hover{
+            transform:  skew(10deg);
+            transition: transform 1s ease;
+        }
+
+        .icon{
+            font-size: 32px;
+            width: 10px;
+            height: 10px;
+        }
+        .icon:hover{
+            transform: rotate(-15deg) scale(1.1) translateY(-5px);
+            transition: transform 1s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.SDFYW9LFUXE9NIKPmS0ZEwHaE8%3Fpid%3DApi&f=1&ipt=10ff16ba5312bff7831a71b5edff7c7479e960b1ca42ee2c935f766773ccb19a&ipo=images" alt="img" class="image">
+    </div><br>
+
+    <button class="btn">click me</button><br><br>
+
+    <div class="card">tilt me</div><br><br>
+
+    <div class="icon">⭐</div>
+</body>
+</html>

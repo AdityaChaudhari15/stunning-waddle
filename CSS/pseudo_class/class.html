@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pseudo Classes Examples</title>
+  <style>
+    /* -------------------------------
+       1. :hover example on a button
+    --------------------------------*/
+    button {
+      background-color: lightblue;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      margin: 10px;
+    }
+
+    button:hover {
+      background-color: green;
+      color: white;
+    }
+    
+
+
+    /* -------------------------------
+       2. :active example on a button
+    --------------------------------*/
+    button:active {
+      border: 2px solid black;
+    }
+
+    /* -------------------------------
+       3. :focus example on input
+    --------------------------------*/
+    input {
+      border: 2px solid gray;
+      padding: 5px;
+      margin: 10px;
+    }
+    
+    input:focus {
+      border: 2px solid red;
+      outline: none;
+    }
+
+    /* -------------------------------
+       4. :first-child and :last-child
+    --------------------------------*/
+    .example1 li:first-child {
+      color: red;
+    }
+
+    .example1 li:last-child {
+      color: green;
+    }
+
+    /* -------------------------------
+       5. :nth-child example
+    --------------------------------*/
+    .example2 li:nth-child(2) {
+      color: red;
+    }
+
+    .example2 li:nth-child(odd) {
+      background-color: gray;
+    }
+    
+
+    /* -------------------------------
+       6. :visited example on links
+    --------------------------------*/
+    a:visited {
+      color: aqua;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- :hover and :active -->
+  <h2>:hover and :active</h2>
+  <button>Hover & Click Me</button>
+
+  <!-- :focus -->
+  <h2>:focus</h2>
+  <input type="text" placeholder="Click or Tab here">
+
+  <!-- :first-child and :last-child -->
+  <h2>:first-child and :last-child</h2>
+  <ul class="example1">
+    <li>First Item</li>
+    <li>Middle Item</li>
+    <li>Last Item</li>
+  </ul>
+
+  <!-- :nth-child -->
+  <h2>:nth-child</h2>
+  <ul class="example2">
+    <li>One</li>
+    <li>Two</li>
+    <li>Three</li>
+    <li>Four</li>
+  </ul>
+
+  <!-- :visited -->
+  <h2>:visited</h2>
+  <a href="https://acciojob.com" target="_blank">Go to Acciojob</a>
+
+</body>
+</html>

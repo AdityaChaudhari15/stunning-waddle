@@ -1,0 +1,38 @@
+<!-- 
+Classname
+
+ClassList
+Add 
+Remove
+Toggle
+Contains
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="unique" class=" shadow green">Container</div>
+
+    <script>
+        let unique = document.getElementById("unique");
+        // unique.className = "c1 c2"; //overwrites existing classes
+        
+        unique.classList.add("c3","c4"); //adds classes
+
+        unique.classList.remove("c2"); //removes class
+
+        unique.classList.toggle("c4"); //removes c4 as it is already present
+
+        let ispresent = unique.classList.contains("c1"); //true
+        console.log(ispresent);
+
+        let replace = unique.classList.replace("shadow","boxshadow"); //replaces c1 with newc1
+        console.log(replace);
+    </script>
+</body>
+</html>
