@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            #container{
+                margin: 20px;
+                display: flex;
+            }
+            #container::before{
+                content: "Before Element";
+                color: #f00;
+                font-size: 20px;
+                display: flex;
+                padding: 10px;
+            }
+            #container::after{
+                content: "After Element";
+                color: #f00;
+                font-size: 20px;
+                display: flex;
+                padding: 10px;
+            }
+        </style>
+</head>
+<body>
+    <!-- Create a div element with the ID container. This is the main element you'll work with.
+Apply the following styles to the #container element in your CSS code:
+Set a margin of 20px to the container.
+Use a CSS pseudo-element to insert content before the main content of the container.
+Use another CSS pseudo-element to insert content after the main content of the container.
+The content inserted before and after should be displayed in red color (#f00).
+The font size of the inserted content should be 20px.
+Implement the necessary CSS pseudo-elements to achieve the layout shown in the image. 
+Output :- Before Element This is the main container element After Element.
+-->
+
+    <div id="container">
+        <p>This is the main container element</p>
+    </div>
+
+
+
+
+</body>
+</html>

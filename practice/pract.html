@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="ul"></ul>
+
+    <script>
+        let ul = document.getElementById("ul");
+        let arr = ["1","2","3","4","5"];
+        arr.forEach(elem => {
+            let li = document.createElement("li");
+            li.textContent = elem;
+            li.addEventListener("click",()=>{
+                // alert(`you clicked ${} in ${}`)
+            })
+            ul.appendChild(li)
+        });
+    </script>
+</body>
+</html>

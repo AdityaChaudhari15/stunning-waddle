@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        // Object literal syntax
+        // let person = {
+        //     name: "John",
+        //     age: 30,
+        //     greet: function () {
+        //         console.log("Hello, my name is " + this.name);
+        //     }
+        // };
+
+        // console.log(person.name); // Accessing property
+        // console.log(person[age]); // Accessing property using []
+        // person.greet(); // Calling method
+
+        // // Constructor function
+        // function Car(make, model, year) {
+        //     this.make = make;
+        //     this.model = model;
+        //     this.year = year;
+        //     this.getInfo = function () {
+        //         return this.year + " " + this.make + " " + this.model;
+        //     };
+        // }
+
+        // let myCar = new Car("Toyota", "Corolla", 2020);
+        // console.log(myCar.getInfo()); // Calling method
+
+        // // ES6 Class syntax
+        // class Animal {
+        //     constructor(name, species) {
+        //         this.name = name;
+        //         this.species = species;
+        //     }
+
+        //     speak() {
+        //         console.log(this.name + " makes a noise.");
+        //     }
+        // }
+
+        // let dog = new Animal("Rex", "Dog");
+        // dog.speak(); // Calling method
+
+        // classes
+        // class User {
+        //     constructor(firstName, lastName, contact) {
+        //         this.firstName = firstName;
+        //         this.lastName = lastName;
+        //         this.contact = contact;
+        //     }
+
+        //     getName() {
+        //         console.log(this.firstName, this.lastName);
+        //     }
+
+        // }
+
+        // const user1 = new User("Rohit", "Shah", "55555");
+        // console.log(user1);
+        // console.log(user1.contact);
+
+
+        // prototypes
+        // let user1 = {
+        //     firstName: "Rohit",
+        //     lastName: "Shah",
+        //     contact: "555555"
+        // }
+
+        // let user2 = {
+        //     firstName: "Amit",
+        //     lastName: "Gupta",
+        //     contact: "5486561"
+        // }
+
+        // let user2 = Object.create(user1);
+
+        // console.log(user2); 
+
+        // console.log(user1.firstName);
+        // console.log(user2.firstName);
+
+        // console.log(user1.__proto__);
+        // console.log(user2.__proto__);
+
+
+        // let str = "Learning is fun";
+        // console.log(str.__proto__.__proto__.__proto__);
+
+        // let n = 4;
+        // console.log(n.__proto__);
+
+        // let str2 = new String("Another string");
+
+        // String
+        // Boolean
+        // Number
+
+        // Wrapper classes
+
+        // str.__proto__ = String.prototype
+
+
+
+        //example;
+
+        // let u1 = {
+        //     x1: "inside u1"
+        // }
+        // let u2 = {
+        //     x2: "inside u2",
+        //     __proto__: u1
+        // }
+        // let u3 = {
+        //     x3: "inside u3",
+        //     __proto__: u2
+        // }
+
+        // console.log(u3.x1);
+        // console.log(u3.x2);
+        // console.log(u1);
+        // console.log(u1.__proto__);     // u1.__proto__ = user.__proto__
+
+        // - TODO 1: Create an object with `name` and `age`.
+        // - TODO 2: Add `setAge(newAge)` to change `age`.
+        // - TODO 3: Add `info()` to return `"Name (Age)"`.
+
+        // let user = {
+        //     name : "aditya",
+        //     age : "22",
+        //     setAge: function(newAge){
+        //         this.age = newAge
+        //     },
+        // }
+        // user.setAge(16);
+        // console.log(user);
+
+        // class User {
+        //     constructor(name, age, setAge) {
+        //         this.name = name;
+        //         this.age = age;
+        //     }
+
+        //     setAge(newAge){
+        //         this.age = newAge;
+        //         return user;
+        //     }
+
+        //     info() {
+        //         return `${this.name}, [${this.age}]`;
+        //     }
+        // }
+        // const user = new User("adi", "22");
+        // console.log(user);
+        // console.log(user.setAge(16));
+        // console.log(user.info());
+
+        // ## Assignment 2
+        // ### Description
+        // Make a basic “counter maker” using a function that creates counters.Each counter has a `count` and two methods: `inc()` and`value()`.
+        // ### TODOs
+        //     - TODO 1: Write a function that sets`this.count = 0`.
+        //     - TODO 2: Put `inc()` on the function’s prototype to add 1.
+        //     - TODO 3: Put `value()` on the prototype to return the count.
+
+        // class Counter {
+        //     constructor() {
+        //         this.count = 0;
+        //     }
+
+        //     inc() {
+        //         this.count++;
+        //     }
+
+        //     value() {
+        //         return this.count;
+        //     }
+        // }
+        // function counter(){
+        //     this.count = 0;
+        // }
+        
+        // let co = new counter();
+        
+        // console.log(co);
+        
+        // counter.prototype.inc = function(){
+        //     this.count++;    
+        // }
+        // co.inc();
+        // co.inc();
+        // co.inc();
+
+        // console.log(co);
+        // counter.prototype.value = function(){
+        //     return this.count;
+        // }
+        // console.log(co.value());
+
+//         ### Description
+//         Use a base object to share a method, and make a new object from it using `Object.create`. The child object should have its own `title` and use the base’s `describe()`.
+//          ### TODOs
+//          - TODO 1: Make a base object with `describe()` returning `"Title: <title>"`.
+//          - TODO 2: Create a child object via `Object.create(base)`.
+//          - TODO 3: Set `child.title = "My Note"` and call `child.describe()`.
+
+        // let base = {
+        //     describe: function () {
+        //         return `Title: ${this.title}`;
+        //     }
+        // }
+
+        // let child = Object.create(base);
+        // child.title = "My Note";
+        // console.log(child.describe());
+
+        // ### Description
+        // Compare a primitive string and a wrapper string object. Add a small method on the string prototype and use it from both values.
+        // ### TODOs
+        // - TODO 1: Make `p = "hello"` and `w = new String("hello")`, log `typeof`.
+        // - TODO 2: Add `lastChar()` to `String.prototype` to return the last character.
+        // - TODO 3: Call `lastChar()` on both `p` and `w`.
+
+        // let p = "hello";
+        // let w = new String("hello");
+        // console.log(typeof p);
+        // console.log(typeof w);
+
+        // String.prototype.lastChar = function () {
+        //     return this.charAt(this.length - 1);
+        // }
+
+        // console.log(p.lastChar());
+        // console.log(w.lastChar());
+
+
+    // ### Description
+    //     Connect three plain objects for property lookups: `child -> parent -> grand`. Show that the child can access values from the chain and can override a property.
+    //     ### TODOs
+    //     - TODO 1: Create `grand`, `parent`, `child` with keys `g`, `p`, `c`.
+    //     - TODO 2: Link `child.__proto__ = parent` and `parent.__proto__ = grand`.
+    //     - TODO 3: Read `child.g`, `child.p`, `child.c`.
+    //     - TODO 4: Set `parent.color = "blue"` then `child.color = "red"` and read both times.
+
+        let grand = {
+            g: "inside grand"
+        }
+        let parent = {
+            p: "inside parent",
+            __proto__: grand
+        }
+        let child = {
+            c: "inside child",
+            __proto__: parent
+        }
+
+        console.log(child.g);
+        console.log(child.p);
+        console.log(child.c);
+
+        parent.color = "blue";
+        console.log(parent.color);
+        child.color = "red";
+        console.log(child.color);
+        console.log(parent.color);
+        console.log(grand.color);
+        
+        
+
+    </script>
+</body>
+
+</html>

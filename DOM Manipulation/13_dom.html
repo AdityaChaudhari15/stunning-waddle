@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ Section</title>
+  <style>
+    body{
+      background-color: linear-gradient(to right, #f39007, #19a0e9);
+      /* font-family: monospace, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+      padding: 20px;
+      text-align: center;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .faq{
+      max-width: 600px;
+      margin: auto;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      border: 2px solid #010101;
+      border-radius: 32px;
+      padding: 16px;
+      background-color: lightyellow;
+      margin-bottom: 16px;
+      border-color: aqua;
+    }
+    .answer {
+      display: none; /* Hide answers by default */
+      color: gray;
+      margin-left: 20px;
+    }
+    .question {
+      cursor: pointer; /* Indicate clickable element */
+      font-weight: bold;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <div class="faq">
+      <div class="question">What is JavaScript?</div>
+      <div class="answer">JavaScript is a programming language for the web.</div>
+    </div>
+    <div class="faq">
+      <div class="question">What is the DOM?</div>
+      <div class="answer">The DOM is the Document Object Model of a webpage.</div>
+    </div>
+    <div class="faq">
+      <div class="question">What is an event listener?</div>
+      <div class="answer">An event listener listens for and reacts to user interactions.</div>
+    </div>
+  </div>
+
+  <script>
+    let ques = document.querySelectorAll(".question");
+    // let ans = document.querySelectorAll(".answer");
+    // for (let i = 0; i < ques.length; i++) {
+    //   ques[i].addEventListener("click", function() {
+    //     let answer = this.nextElementSibling;
+    //     if (answer.style.display === "block") {
+    //       answer.style.display = "none";
+    //     } else {
+    //       answer.style.display = "block";
+    //     }
+    //   });
+    // }
+
+    //or
+    ques.forEach(elem => {
+        elem.addEventListener("click",function(e){
+            let ans = e.target.nextElementSibling;
+            if (ans.style.display === "block") {
+              ans.style.display = "none";
+            } else {
+              ans.style.display = "block";
+            }
+        })
+    })
+  </script>
+</body>
+</html>

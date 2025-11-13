@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let button = document.createElement("button");
+button.id = "cancelBtn";
+button.innerText = "Cancel Meeting";
+document.body.appendChild(button);
+
+let timeoutId = setTimeout(()=>{     
+    console.log("Meeting starts now!");
+}, 3000);
+
+document.getElementById("cancelBtn").addEventListener("click", ()=>{
+    clearTimeout(timeoutId);
+    console.log("Meeting Cancelled");
+});
+    </script>
+</body>
+</html>

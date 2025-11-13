@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="username" placeholder="Enter GitHub Username">
+    <button>Fetch Profile</button>
+    <div id="profile">
+        <!-- //by using fetch API display github profile details like avatar, name, followers and number of public repos. -->
+    </div>
+
+    <script>
+        let button = document.querySelector('button');
+        let profile = document.getElementById('profile');
+
+        button.addEventListener('click', () => {
+            let username = document.getElementById('username').value;
+            fetch(`https://api.github.com/users/${username}`)
+                .then((res) => {
+                    return res.json();
+                })
+                .then((data) => {
+                    profile.innerHTML = `
+                        <img src="${data.avatar_url}" alt="Avatar" width="100">
+                        <h2>${data.name}</h2>
+                        <p>Followers: ${data.followers}</p>
+                        <p>Public Repos: ${data.public_repos}</p>
+                    `;
+                })
+                .catch((err) => {
+                    console.log(err);;
+                });
+        });
+    </script>
+</body>
+</html>

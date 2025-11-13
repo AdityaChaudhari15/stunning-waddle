@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="form">
+        <label>
+            Name: <input type="text" id="name" required>
+        </label><br><br>
+        <label>
+            Email: <input type="email" id="email" required>
+        </label><br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <h3>User:</h3>
+    <p id="displayName"></p>
+    <p id="displayEmail"></p>
+
+    <script>
+        const form = document.getElementById('form');
+        const name = document.getElementById('name');
+        const email = document.getElementById('email');
+        const displayName = document.getElementById('displayName');
+        const displayEmail = document.getElementById('displayEmail');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+            localStorage.setItem('name', name.value);
+            localStorage.setItem('email', email.value);
+            displayName.textContent = "Name: " + name.value;
+            displayEmail.textContent = "Email: " + email.value;
+            form.reset();
+        });
+    </script>
+</body>
+
+</html>

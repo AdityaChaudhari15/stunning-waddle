@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form id="form">
+    <!-- full name -->
+    <label>Name</label>
+    <input type="text" id="name"><br><br>
+    <!-- email -->
+    <label>Email</label>
+    <input type="text" id="email"><br><br>
+    <!-- password -->
+    <label>Password</label>
+    <input type="password" id="pass"><br><br>
+    <!-- confirm password -->
+    <label>Confirm Password</label>
+    <input type="password" id="confirm-pass"><br><br>
+    <!-- age -->
+    <label>Age</label>
+    <input type="number" id="age"><br><br>
+    <!-- country -->
+    <label>Country</label>
+    <select id="country">
+      <option value="">Select Country</option>
+      <option value="1">India</option>
+      <option value="2">America</option>
+      <option value="3">Sri Lanka</option>
+    </select><br><br>
+    <!-- terms -->
+    <input type="checkbox" id="accept">
+    <label>accept all Terms and conditions</label><br><br>
+    <!-- submit button -->
+    <input type="submit" value="submit">
+  </form>
+
+  <!-- error paragraph -->
+  <p id="error" style="color: red;"></p>
+
+  <script>
+    let form = document.getElementById("form");
+    let name = document.getElementById("name");
+    let email = document.getElementById("email");
+    let pass = document.getElementById("pass");
+    let conf = document.getElementById("confirm-pass");
+    let age = document.getElementById("age");
+    let country = document.getElementById("country");
+    let terms = document.getElementById("accept");
+    let error = document.getElementById("error");
+
+    form.addEventListener("submit", (e) => {
+      let isValid = true;
+      error.textContent = "";
+
+      if (
+        name.value.trim() === "" ||
+        email.value.trim() === "" ||
+        pass.value.trim() === "" ||
+        conf.value.trim() === "" ||
+        age.value.trim() === ""
+      ) {
+        error.textContent = "Please fill in all the required details";
+        isValid = false;
+      }
+      // Robust email regex: checks for something@something.something (very basic)
+      else if (
+        !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())
+      ) {
+        error.textContent = "You entered an invalid email!";
+        isValid = false;
+      } 
+      // Password strength check
+      else if (pass.value.length < 6) {
+        error.textContent = "Password length must be at least 6!";
+        isValid = false;
+      }
+      // Password match check
+      else if (conf.value !== pass.value) {
+        error.textContent = "Password is not same!";
+        isValid = false;
+      }
+      // Age check
+      else if (Number(age.value) < 18) {
+        error.textContent = "Age should be greater than 18!";
+        isValid = false;
+      }
+      // Dropdown (Country) check
+      else if (country.value === "") {
+        error.textContent = "Select a country!";
+        isValid = false;
+      }
+      // Checkbox (Terms)
+      else if (!terms.checked) {
+        error.textContent = "Accept the terms and conditions!";
+        isValid = false;
+      }
+
+      if (isValid) {
+        error.textContent = "";
+        alert("Form submitted successfully!");
+      } else {
+        e.preventDefault();
+      }
+    });
+  </script>
+</body>
+</html>

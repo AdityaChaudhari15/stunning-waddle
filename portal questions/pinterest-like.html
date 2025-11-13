@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 24px;
+            max-width: 800px;
+            margin: auto;
+            gap: 32px;
+        }
+
+        .hero img {
+            max-width: 600px;
+            height: auto;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .description{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
+        }
+
+        .hero h1 {
+            margin: 0;
+            text-align: center;
+            max-width: 300px;
+        }
+
+        .hero p {
+            margin: 0;
+            text-align: center;
+            max-width: 300px;
+        }
+
+        .hero a {
+            padding: 12px 24px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1em;
+            margin-top: 8px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Component	Description
+Container	Use a class name of hero for the entire content's container. The container must have the following CSS properties: display, justify-content, align-items.
+Image	Include an image with this link. The image must be styled with width, height, and object-fit: cover to ensure it is clipped to fit inside its parent container if the aspect ratio does not match.
+"Explore Now" Button or Link	Include an "Explore now" button or link in the hero section. Style it with the following CSS properties: padding, background-color, color, border-radius. If there's no button, ensure that there's at least one link a tag. -->
+
+    <div class="hero" >
+        <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.coolfreepix.com%2Fimages%2Figallery%2Fresized%2F401-500%2Fjplenio_DSC01455-420-4000-4000-100.jpg&f=1&nofb=1&ipt=910c5a56730e9d421a9dcf8461f1dd960895fc33f9a30ad81bcec0720b5c542e" alt="Hero Image">
+        <div class="description">
+        <h1>Welcome to my Pinterest clone</h1>
+        <p>Discover new inspiration and save your favourite ideas</p>
+        <a href="#">Explore Now</a>
+        </div>
+    </div>
+
+</body>
+</html>

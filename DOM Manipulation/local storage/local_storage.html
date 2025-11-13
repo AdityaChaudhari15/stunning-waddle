@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Enter your name" id = "name">
+    
+    <br>
+    <input type="email" placeholder="Enter your email" id ="email">
+    <br>
+    <button type="submit" id = "submitdata">Enter Data</button>
+
+    <script>
+        // let name = "Ajay";
+        // localStorage.setItem("myName","rohan")
+        // localStorage.setItem("myEmail","rohan@gmail.com");
+
+        // console.log(localStorage.getItem("myName"));
+        // console.log(localStorage.getItem("myEmail"));
+
+        
+        // let button = document.getElementById('submitdata');
+
+        // button.addEventListener('click',()=>{
+        let name = document.getElementById('name');
+        let email = document.getElementById('email');
+        // localStorage.setItem("name",name);
+        // localStorage.setItem("email",email);
+        // });
+
+        name.addEventListener("input", (e)=>{
+            localStorage.setItem("myName", e.target.value);
+        })
+        email.addEventListener("input", (e)=>{
+            localStorage.setItem("myEmail", e.target.value);
+        })
+    </script>
+</body>
+</html>

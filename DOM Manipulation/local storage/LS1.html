@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Enter your name" id = "name">
+    <br>
+    <input type="age" placeholder="Enter your age" id ="age">
+    <br>
+    <button type="submit" id = "submitdata">Enter Data</button>
+
+    <script>
+        // let object = {}
+        // let btn = document.getElementById('btn');
+        // btn.addEventListener('click',()=>{
+        //     let key = document.getElementById('name').value;
+        //     let value = document.getElementById('age').value;
+        //     object[key] = value;
+        //     localStorage.setItem("data", JSON.stringify(object));
+        // })
+
+        let name = document.getElementById('name');
+        let age = document.getElementById('age');
+
+        let myData = {
+            name :  "",
+            age :  ""
+        }
+
+        myData.addEventListener('input', (e)=>{
+            myData.name = e.target.value;
+            localStorage.setItem("myData", JSON.stringify(myData))
+        })
+        myData.addEventListener('input', (e)=>{
+            myData.age = e.target.value;
+            localStorage.setItem("myData", JSON.stringify(myData))
+        })
+    </script>
+
+
+
+
+</body>
+</html>

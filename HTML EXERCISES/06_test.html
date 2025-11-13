@@ -1,0 +1,329 @@
+<!-- IMDb Page Styling
+People are bored with the original movie detail page of IMDb. Your task is to update a section for them and make it more beautiful. Below are the mandatory requirements for the movie detail page. Feel free to add more styles to make it more appealing.
+
+The poster for the movie:
+Must be inside an "img" tag with a class of "moviePic".
+Should have CSS properties: height, width, and opacity.
+The description of the movie:
+Must be inside a "p" tag with a class of "movieDetail".
+Should be in the center of the page using CSS properties: position, top, width, text-align, and font-size.
+Note: Don't use inline CSS, instead use class selectors for CSS,
+Element	Description	Class	CSS Properties
+img	Movie Poster	moviePic	height, width, opacity
+p	Movie Description	movieDetail	position, top, width, text-align, font-size
+Please adhere to the instructions above to create a beautiful IMDb movie detail page that fulfills the requirements. -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .moviePic{
+            height: 400px;
+            width: 300px;
+            opacity: 0.9;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .movieDetail{
+            position: relative;
+            top: 20px;
+            width: 60%;
+            text-align: center;
+            font-size: 20px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <img class="moviePic" src="https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg" alt="Movie Poster">
+    <p class="movieDetail">A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.</p>
+</body>
+</html> -->
+
+<!-- Create a Modal using css as shown below: demo gif
+
+Instructions
+When the page first loads, there should be a button on the screen with the id of openModal
+When we click on the button, the modal should open like in the image.
+It should close when clicked outside the modal or the close button
+The modal should be a div with the class of modal and should have a div modal-content inside of it.
+The modal-content should have two divs: one with the class of modal-header and other with the class of modal-body.
+modal-header should have an <h2> with the title Modal Header and a close button with the class of close-modal
+The modal body should contain a <p> tag with the content as Modal Body Content -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+        }
+        #openModal{
+            padding: 12px 24px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .modal{
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+        .modal-content{
+            background-color: #fefefe;
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+            border-radius: 8px;
+        }
+        .modal-header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .close-modal{
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close-modal:hover,
+        .close-modal:focus{
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id="openModal">Open Modal</button>
+
+    <div class="modal" id="myModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Modal Header</h2>
+                <span class="close-modal" id="closeModal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p>Modal Body Content</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        const modal = document.getElementById("myModal");
+        const openModalBtn = document.getElementById("openModal");
+        const closeModalBtn = document.getElementById("closeModal");
+        openModalBtn.onclick = function(){
+            modal.style.display = "block";
+        }
+        closeModalBtn.onclick = function(){
+            modal.style.display = "none";
+        }
+        window.onclick = function(event){
+            if(event.target == modal){
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html> -->
+
+<!-- Semantic Navbar and Videos
+Create a semantic navbar with specific links and display a set of videos on the page.
+
+Navbar Requirements:
+Requirement	Description
+Semantic Tags	Use semantic elements for the navbar, including nav, ul, and a.
+Links	Total of 3 links: "Home", "About us", and "Contact us". You can use any href of your choice.
+Video Requirements:
+Requirement	Description
+Heading	Add the heading "3 random videos" above the videos.
+Videos	Include 3 videos using the following URLs:
+http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4
+http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4
+http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4
+Display the controls attribute for each video. Use dedicated source tag to add the source urls for each video.
+Acceptance Criteria:
+The navbar must be constructed semantically with appropriate tags and must contain the specified links.
+The videos must be displayed with the correct sources and include the controls attribute as specified.
+The heading above the videos must be present and correctly placed. -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav{
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li{
+            float: left;
+        }
+        nav ul li a{
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav ul li a:hover{
+            background-color: #ddd;
+            color: black;
+        }
+        h2{
+            text-align: center;
+            margin-top: 20px;
+        }
+        .video-container{
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        video{
+            width: 30%;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Contact us</a></li>
+        </ul>
+    </nav>
+
+    <h2>3 random videos</h2>
+
+    <div class="video-container">
+        <video controls>
+            <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <video controls>
+            <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <video controls>
+            <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</body>
+</html> -->
+
+
+<!-- Semantic Navigation Bar and Image Display
+Create a semantic navbar with specific links and display a set of images on the page. Details are provided below:
+
+Navbar Requirements:
+Requirement	Description
+Semantic Tags	Use semantic elements for the navbar, including nav, ul, and a.
+Links	Total of 3 links: "Home", "About us", and "Contact us". You can use any href of your choice.
+Image Requirements:
+Requirement	Description
+Heading	Add the heading "3 random images" above the images.
+Images	Include 3 images using the following URLs with alt tag:
+https://picsum.photos/id/123/200/300
+https://picsum.photos/id/124/200/300
+https://picsum.photos/id/125/200/300
+The alt tag should contain the text "Random image" in all the three image tags.
+Acceptance Criteria:
+The navbar must be constructed semantically with appropriate tags and must contain the specified links.
+The images must be displayed with the correct sources and include the alt tag as specified.
+The heading above the images must be present and correctly placed. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav{
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li{
+            float: left;
+        }
+        nav ul li a{
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav ul li a:hover{
+            background-color: #ddd;
+            color: black;
+        }
+        h2{
+            text-align: center;
+            margin-top: 20px;
+        }
+        .image-container{
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        img{
+            width: 30%;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Contact us</a></li>
+        </ul>
+    </nav>
+
+    <h2>3 random images</h2>
+
+    <div class="image-container">
+        <img src="https://picsum.photos/id/123/200/300" alt="Random image">
+        <img src="https://picsum.photos/id/124/200/300" alt="Random image">
+        <img src="https://picsum.photos/id/125/200/300" alt="Random image">
+    </div>
+</body>
+</html>

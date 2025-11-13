@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Products Discounted Prices</h2>
+    <div id="output"></div>
+
+    <script>
+        class Product {
+            constructor(name, price, discount) {
+                this.name = name;
+                this.price = price;
+                this.discount = discount; 
+            }
+
+            getPriceAfterDiscount() {
+                return this.price - (this.price * this.discount / 100);
+            }
+
+            displayInfo() {
+                return `
+                    Product: ${this.name}<br>
+                    Original Price: Rs.${this.price}<br>
+                    Discount: ${this.discount}%<br>
+                    Price after Discount: Rs.${this.getPriceAfterDiscount()}<br><br>`;
+            }
+        }
+
+        const product1 = new Product('Laptop', 1000, 15);
+        const product2 = new Product('Phone', 600, 10);
+        const outputDiv = document.getElementById('output');
+        outputDiv.innerHTML = product1.displayInfo() + product2.displayInfo();
+
+        console.log(product1.getPriceAfterDiscount());
+        console.log(product2.getPriceAfterDiscount());
+    </script>
+</body>
+
+</html>

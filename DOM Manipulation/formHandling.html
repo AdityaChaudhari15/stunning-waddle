@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .error{
+            color: red;
+            font-size: 14px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Form with Form Events</h1>
+
+    <form id ="simpleForm">
+        <label for="name">Name: </label>
+        <input type="text" name="name" id="name" placeholder="Enter your name">
+        <span id="nameError" class="error"></span>
+        <br></br>
+
+        <label for="color"></label>
+        <select name="color" id="color">
+            <option value="">--Select--</option>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+        </select>
+        <br></br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        let simpleForm = document.getElementById('simpleForm');
+let nameInput = document.getElementById('name');
+let colorSelect = document.getElementById('color');
+let nameError = document.getElementById('nameError');
+
+
+// focus event on name input
+nameInput.addEventListener('focus', () => {
+    nameError.textContent = "";
+});
+
+
+// blur event on name input
+nameInput.addEventListener('blur', () => {
+    if (nameInput.value.trim() === "") {
+        nameError.textContent = "Name is Required!";
+    }
+});
+
+
+// input event on name input
+nameInput.addEventListener('input', () => {
+    console.log("user is typing: ", nameInput.value);
+});
+
+
+// change event on color select
+colorSelect.addEventListener('change', () => {
+    console.log("Color Selected: ", colorSelect.value);
+});
+
+
+// submit event on form
+simpleForm.addEventListener('submit', () => {
+    // check if the name field is empty
+    if (nameInput.value.trim() === "") {
+        nameError.textContent = "Name is required";
+        return;
+    }
+    event.preventDefault();
+
+    console.log("Form Submitted!!");
+    console.log(nameInput.value);
+    console.log(colorSelect.value);
+});
+    </script>
+</body>
+</html>

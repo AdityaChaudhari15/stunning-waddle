@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Manager</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Student Manager</h2>
+
+    <form id="form">
+        <label>Name: <input type="text" id="name" required></label>
+        <label>Course: <input type="text" id="course" required></label>
+        <label>Marks: <input type="number" id="marks" required></label>
+        <button type="submit">Add Student</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Course</th>
+                <th>Marks</th>
+                <th>Grade</th>
+            </tr>
+        </thead>
+        <tbody id="studentTbody">
+        </tbody>
+    </table>
+
+    <script>
+        class Student {
+            constructor(name, course, marks) {
+                this.name = name;
+                this.course = course;
+                this.marks = marks;
+            }
+            getGrade() {
+                return this.marks >= 40 ? "Pass" : "Fail";
+            }
+        }
+
+        const form = document.getElementById('form');
+        const tableBody = document.getElementById('studentTbody');
+        let students = JSON.parse(localStorage.getItem('students')) || [];
+
+        function addStudentToTable(student) {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+      <td>${student.name}</td>
+      <td>${student.course}</td>
+      <td>${student.marks}</td>
+      <td>${student.getGrade()}</td>
+    `;
+            tableBody.appendChild(row);
+        }
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+            const name = form.name.value.trim();
+            const course = form.course.value.trim();
+            const marks = parseInt(form.marks.value);
+            if (name && course && !isNaN(marks)) {
+                const student = new Student(name, course, marks);
+                students.push(student);
+                localStorage.setItem('students', JSON.stringify(students));
+                addStudentToTable(student);
+                form.reset();
+            }
+        });
+    </script>
+
+</body>
+
+</html>

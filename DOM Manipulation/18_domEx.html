@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>DOM Practice</title>
+  <style>
+    .title { font-weight: 700; }
+    .box   { padding: 8px; border: 1px solid #ddd; margin: 6px 0; }
+    .blue  { background:#e6f0ff; }
+    .red   { background:#ffe6e6; }
+    .hidden{ display:none; }
+    .rounded { border-radius: 8px; }
+    .highlight{ outline: 2px dashed orange; }
+  </style>
+</head>
+<body>
+  <div id="main" class="box blue">
+    <h1 class="title">Welcome</h1>
+    <p id="info">This is a paragraph.</p>
+    <button id="action">Click me</button>
+  </div>
+
+  <div id="playground" class="box">
+    <h2>Playground</h2>
+    <ul id="list">
+      <li class="item">Alpha</li>
+      <li class="item">Beta</li>
+    </ul>
+    <div id="output"></div>
+  </div>
+
+  <!-- Your scripts go here -->
+  <script>
+    // write code per task below
+//     ## Task 1 — Basic Selectors
+// 1. Use `getElementById`, `getElementsByClassName`, `getElementsByTagName`, `querySelector`, and `querySelectorAll` to select:
+// - the `#main` div,
+// - the `.title` element,
+// - all `<p>` tags,
+// - the first `.item`,
+// - all `.item`s
+
+    let main = document.getElementById('main');
+    let title = document.getElementsByClassName('title');
+    let para = document.getElementsByTagName('p');
+    let firstItem = document.querySelector('.item');
+    let allItems = document.querySelectorAll('.item');
+
+    // console.log(main);
+    // console.log(title); 
+    // console.log(para);
+    // console.log(firstItem);
+    // console.log(allItems);
+
+// ## Task 2 — Node vs Element: Inspect Structure
+// Using the shared HTML:
+// - Log `#main`’s `childNodes.length` and `children.length`.
+// - Log `firstChild`, `firstElementChild`, `lastChild`, `lastElementChild`.
+// - Explain in a comment why `childNodes` and `children` usually differ.
+
+    // console.log(main.childNodes.length);
+    // console.log(main.children.length);
+    // console.log(main.firstChild);
+    // console.log(main.firstElementChild);
+    // console.log(main.lastChild);
+    // console.log(main.lastElementChild);
+
+// ## Task 3 — `textContent` vs `innerHTML`
+// Inside `#main`:
+// - Set the `<p id="info">` content to the literal string `"<b>Safe?</b>"` using `textContent`.
+// - Then set it to render bold using `innerHTML` (`<b>Safe?</b>`).
+// - In comments, note the difference and which is safer for user input.
+
+    let temp = document.getElementById('info');
+    temp.textContent = "<b>safe?<b>";
+    temp.innerHTML = "<b>safe?<b>";
+
+// ## Task 4 — Create and Append
+// Create a new paragraph with text:
+// `"Added by createElement + appendChild"`
+// Append it to `#playground`.
+
+        // let playground = document.getElementById('playground');
+        // let para = document.createElement('para');
+        // para.innerText = "added by creatElement + appendChild";
+        // playground.appendChild("para");
+
+
+// ## Task 7 — Attributes: Toggle Image `src` + `alt`
+// Add this HTML just above `#playground`:
+// ```html
+// <img id="hero" src="https://via.placeholder.com/120x60?text=A" alt="Image A">
+// <button id="swap">Swap Image</button>
+// ```
+// On clicking **Swap Image**, toggle between:
+// - `src=https://via.placeholder.com/120x60?text=A`, `alt="Image A"`
+// - `src=https://via.placeholder.com/120x60?text=B`, `alt="Image B"`
+//     Use `getAttribute`, `setAttribute`.
+
+        let img = document.createElement('img');
+        img.setAttribute('id','hero');
+        img.setAttribute('src','https://via.placeholder.com/120x60?text=A');
+        img.setAttribute('alt','Image A');
+        document.body.insertBefore(img,playground);
+
+        let btn = document.createElement('button');
+        btn.setAttribute('id','swap');
+        btn.innerText = "Swap Image";
+        document.body.insertBefore(btn,playground);
+
+        let swap = document.getElementById('swap');
+        let hero = document.getElementById('hero');
+
+        swap.addEventListener('click',()=>{
+            let currsrc = hero.getAttribute('src');
+            if(currsrc.includes('text=A')){
+                hero.setAttribute('src','https://i.pinimg.com/1200x/e9/c7/11/e9c71190d73b76d12f4bf7c03b997a09.jpg?text=B');
+                hero.setAttribute('alt','Image B');
+            }
+            else{
+                hero.setAttribute('src','https://i.pinimg.com/1200x/cb/b3/c7/cbb3c722d0ec52d208f901f4b97b15f4.jpg?text=A');
+                hero.setAttribute('alt','Image A');
+            }
+        });
+
+// ## Task 8 — `className` vs `classList`
+// Using `#main`:
+// - Replace all classes with `"box red"` using `className`.
+// - Then **add** `"rounded"` without losing `"box red"` using `classList`.
+// - Finally, toggle `"highlight"` on `#main` each time `#action` is clicked.
+
+        
+
+  </script>
+</body>
+</html>

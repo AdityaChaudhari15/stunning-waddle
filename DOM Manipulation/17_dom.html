@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Search Filter</h1>
+    <input type="text" id="searchBar" placeholder="Search items">
+    <ul id="itemList">
+        <li>Apple</li>
+        <li>Orange</li>
+        <li>Banana</li>
+        <li>Strawberry</li>
+        <li>Blueberry</li>
+    </ul>
+    <script>
+        let searchBar = document.getElementById("searchBar");
+        let itemList = document.getElementById("itemList");
+        let items = itemList.querySelectorAll("li");
+
+        // searchBar.addEventListener("keyup",()=>{
+        //     let filter = searchBar.value.toLowerCase();
+        //     for(let i=0;i<items.length;i++){
+        //         let item = items[i].textContent.toLowerCase();
+        //         if(item.indexOf(filter) > -1){
+        //             items[i].style.display = "";
+        //         }else{
+        //             items[i].style.display = "none";
+        //         }
+        //     }
+        // });
+
+        searchBar.addEventListener("input", () => {
+            let query = searchBar.value.toLowerCase();
+            items.forEach((item) => {
+                if (item.textContent.toLowerCase().includes(query)) {
+                    item.style.display = "";
+                } else {
+                    item.style.display = "none";
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

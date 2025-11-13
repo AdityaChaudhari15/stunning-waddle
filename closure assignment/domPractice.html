@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body{
+            height: 100%;
+            width: 100%;
+            background-color: #999;
+        }
+        #main{
+
+            height: 100%;
+            width: 100%;
+            display: inline-block;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Trebuchet MS';
+        }
+        /* h1{
+            color: #555;
+            font-size: 10rem;
+            font-weight: 300px;
+        } */
+         .card{
+            display: inline-block;
+            border: #555;
+            border-radius: 2px;
+         }
+    </style>
+</head>
+<body>
+    <!-- <button id="blue">Blue</button value = 1>
+    <button id="green">Green</button>
+    <div style="width: 100px; height: 100px;"></div> -->
+
+    <div id="main">
+        <form action="">
+            <input type="text" placeholder="name">
+            <input type="text" placeholder="age">
+            <input type="text" placeholder="number">
+            <input type="text" placeholder="email">
+            <input type="submit">
+        </form>
+    </div>
+
+    <div id="card">
+
+    </div>
+
+    <script>
+
+        let main = document.getElementById("main");
+        let inputs = document.querySelectorAll("inputs");
+        let form = document.querySelector("form");
+
+        form.addEventListener("click",(e)=>{
+            e.preventDefault();
+
+              
+        })
+        
+        // let head = document.querySelector("h1")
+
+        // // let i = 0;
+        // window.addEventListener("keydown", (e)=>{
+        //     // i++;
+        //     // head.textContent = `${i}`;
+        //     head.textContent = e.key;
+        // })
+
+
+        // let blue = document.getElementById("blue")
+        // let green = document.getElementById("green")
+        // let div = document.querySelector("div")
+    
+        // function handler(name){
+        //     return function(){
+        //         div.style.backgroundColor = name;
+        //     }
+        // }
+        // blue.addEventListener("click", handler("blue"))
+        // green.addEventListener("click", handler("green"))
+    </script>
+</body>
+</html>

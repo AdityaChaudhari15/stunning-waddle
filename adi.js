@@ -1701,3 +1701,66 @@
 //   } 
 // }
 // diamond(n)
+
+
+// let a = "Hello World";
+// let b = a.split(" ");
+// let arr = []
+// console.log(b);
+// for(let i=0; i<b.length; i++){
+//     arr.push(b[i].split("").reverse().join(""));
+// };
+// console.log(arr.join(" "));
+
+
+// let arr = [1,2,3,4,5];
+// console.log(
+//  arr.reduce((acc,elem)=>{
+//     return acc+elem;
+// },0));
+
+// Build a Counter using closure
+// write a function that keeps its own private counter and has methods to increment and decrement.
+
+// function count(){
+//     let counter = 0;
+//     return {
+//         increment: function(){
+//             counter++;
+//             return counter;
+//         },
+//         decrement: function(){
+//             counter--;
+//             return counter;
+//         }
+//     };
+// }
+
+// let myCounter = count();
+// console.log(myCounter.increment());
+// console.log(myCounter.increment());
+// console.log(myCounter.increment());
+// console.log(myCounter.decrement());
+
+
+// factorial of a number using recursion
+// function fact(n){
+//     if(n==1){
+//         return 1;
+//     }
+//     let a = fact(n-1);
+//     let b = n*a;
+//     return b;
+// }
+// console.log(fact(5));
+
+// const person = {
+//     name: "jay";
+//     greet: function(city){
+//         console.log(`Hi, I'm ${this.name} from ${city}`);
+//     }
+// }
+// const greetFn = person.greet;
+// greetFn("Delhi");
+// const boundGreet = greetFn.bind(person);
+// boundGreet(greetFn);

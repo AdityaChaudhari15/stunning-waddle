@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="first" class="box">
+        First Div
+        <div id="second" class="box">
+            Second Div
+            <div id="third" class="box">
+                Third Div
+            </div>
+        </div>
+        <div id="sibling" class="box">
+            Next Sibling Div
+        </div>
+    </div>
+
+    <script>
+        const first = document.getElementById('first');
+        const second = document.getElementById('second');
+        const third = document.getElementById('third');
+
+        console.log('first.firstElementChild:', first.firstElementChild);
+
+        console.log('third.parentElement:', third.parentElement);
+
+        if (second.nextElementSibling) {
+            second.nextElementSibling.style.backgroundColor = 'lightblue';
+        }
+    </script>
+</body>
+
+</html>
